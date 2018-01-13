@@ -1,0 +1,21 @@
+{
+  "name": "dijix/query-maker",
+  "type" : "library",
+  "description": "An easy to use SQL query builder",
+  "keywords": ["php", "sql", "query", "builder"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ian Grindley",
+      "email": "ian@dijix.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": {
+        "Dijix\\QueryMaker\\": "src"
+    }
+  }
+}
