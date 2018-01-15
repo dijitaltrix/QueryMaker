@@ -2,6 +2,9 @@
 
 namespace Dijix\QueryMaker;
 
+use Exception;
+use Dijix\QueryMaker\DbInterface;
+
 class Query {
 	
 	# sql query string
@@ -26,10 +29,19 @@ class Query {
 	protected $having;
 	# limit clause
 	protected $limit;
-	
 	# parameter index for bound queries
 	private $parameter_index = 0;
 	
+
+	/**
+	 * Inject DB Adapter
+	 *
+	 * @param AdapterInterface $db 
+	 */
+	public function __construct(Adapters\AdapterInterface $db)
+	{
+		$this->db = $db;
+	}
 
 	#
 	#	query builder methods
